@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Link(models.Model):
-    url = models.CharField(max_length=50)
+    url = models.URLField()
     votes = VotableManager()
     user = models.ForeignKey(User)
 
